@@ -21,11 +21,8 @@
 
 from distutils.core import setup
 from distutils.command.install_data import install_data
-from distutils.dep_util import newer
-from distutils.log import info
 from glob import glob
 import os
-import sys
 
 class InstallData(install_data):
   def run (self):
