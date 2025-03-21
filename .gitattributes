@@ -1,8 +1,0 @@
-* text=auto !eol
-/setup.py -text
-src/cmdline.py -text
-src/info.py -text
-src/set_window.py -text
-src/set_workspace.py -text
-src/utils.py -text
-src/wmectrl.py -text
