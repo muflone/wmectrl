@@ -1,0 +1,7 @@
+-r requirements.txt
+
+PyGObject-stubs~=2.13
+flake8~=7.1
+pycodestyle~=2.12
+build~=1.2
+twine~=5.1
