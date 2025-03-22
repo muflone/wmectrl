@@ -18,12 +18,15 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-APP_NAME = 'wmectrl'
-APP_VERSION = '0.1'
-TRUE = 'true'
-FALSE = 'false'
-truefalse = (TRUE, FALSE)
-
 import time
 
-timestamp = lambda: int(time.time())
+from gi.repository import Wnck
+
+
+class Wmectrl(object):
+    @staticmethod
+    def get_timestamp():
+        return int(time.time())
+
+    def shutdown(self) -> None:
+        return Wnck.shutdown()

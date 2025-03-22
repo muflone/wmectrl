@@ -18,16 +18,6 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-import utils
+import gi
 
-def activate(workspace):
-  "Activate the workspace"
-  workspace.activate(utils.timestamp())
-
-def set_name(workspace, name):
-  "Set the workspace name"
-  workspace.change_name(name)
-
-def set_count(screen, count):
-  "Set the workspace count"
-  screen.change_workspace_count(count)
+gi.require_version('Wnck', '3.0')
