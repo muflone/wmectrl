@@ -102,9 +102,15 @@ class CommandLineOptions(object):
         group.add_argument('--exact-pid',
                            action='store_true',
                            help='select window by exact PID')
+        group.add_argument('--exact-xid',
+                           action='store_true',
+                           help='select window by exact XID')
         group.add_argument('--exact-app-title',
                            action='store_true',
                            help='Select window by application title')
+        group.add_argument('--exact-app-pid',
+                           action='store_true',
+                           help='Select window by application PID')
 
     def add_configuration_window(self) -> None:
         """

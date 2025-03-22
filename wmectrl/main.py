@@ -98,7 +98,9 @@ def main():
                 reference=options.window,
                 exact_title=options.exact_title,
                 exact_pid=options.exact_pid,
-                exact_app_title=options.exact_app_title) is None:
+                exact_xid=options.exact_xid,
+                exact_app_title=options.exact_app_title,
+                exact_app_pid=options.exact_app_pid) is None:
             command_line.parser.error(
                 message=f'Window not found: {options.window}')
     # Move the window to the workspace

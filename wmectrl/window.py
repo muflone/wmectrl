@@ -55,7 +55,9 @@ class Window(Wmectrl):
                     reference: str,
                     exact_title: bool,
                     exact_pid: bool,
-                    exact_app_title: bool) -> Wnck.Window:
+                    exact_xid: bool,
+                    exact_app_title: bool,
+                    exact_app_pid: bool) -> Wnck.Window:
         """
         Find a window by reference
 
@@ -70,9 +72,17 @@ class Window(Wmectrl):
                 # Search for exact PID
                 if int(reference) == window.get_pid():
                     break
+            elif exact_xid:
+                # Search for exact XID
+                if int(reference) == window.get_xid():
+                    break
             elif exact_app_title:
                 # Search for exact application title
                 if reference == window.get_application().get_name():
+                    break
+            elif exact_app_pid:
+                # Search for exact application PID
+                if reference == window.get_application().get_pid():
                     break
             else:
                 # Search for contained title
