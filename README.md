@@ -1,6 +1,11 @@
 # wmectrl
 
 [![CircleCI Build Status](https://img.shields.io/circleci/project/github/muflone/wmectrl/master.svg)](https://circleci.com/gh/muflone/wmectrl)
+[![Python 3.9](https://github.com/muflone/wmectrl/actions/workflows/python-3.9.yml/badge.svg)](https://github.com/muflone/wmectrl/actions/workflows/python-3.9.yml)
+[![Python 3.10](https://github.com/muflone/wmectrl/actions/workflows/python-3.10.yml/badge.svg)](https://github.com/muflone/wmectrl/actions/workflows/python-3.10.yml)
+[![Python 3.11](https://github.com/muflone/wmectrl/actions/workflows/python-3.11.yml/badge.svg)](https://github.com/muflone/wmectrl/actions/workflows/python-3.11.yml)
+[![Python 3.12](https://github.com/muflone/wmectrl/actions/workflows/python-3.12.yml/badge.svg)](https://github.com/muflone/wmectrl/actions/workflows/python-3.12.yml)
+[![Python 3.13](https://github.com/muflone/wmectrl/actions/workflows/python-3.13.yml/badge.svg)](https://github.com/muflone/wmectrl/actions/workflows/python-3.13.yml)
 
 **Description:** An enhanced window manager control
 
@@ -21,26 +26,3 @@ An enhanced window manager control.
 * Python >= 3.9 (developed and tested for Python 3.13)
 * GTK+ 3.0 libraries for Python 3
 * GObject libraries for Python 3 ( https://pypi.org/project/PyGObject/ )
-
-# Installation
-
-A distutils installation script is available to install from the sources.
-
-To install in your system please use:
-
-    cd /path/to/folder
-    python3 setup.py install
-
-To install the files in another path instead of the standard /usr prefix use:
-
-    cd /path/to/folder
-    python3 setup.py install --root NEW_PATH
-
-# Usage
-
-If the application is not installed please use:
-
-    cd /path/to/folder
-    python3 -m wmectrl.main --help
-
-If the application was installed simply use the `wmectrl --help` command.
