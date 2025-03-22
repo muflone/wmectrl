@@ -105,10 +105,6 @@ class CommandLineOptions(object):
         Add window command-line arguments
         """
         group = self.add_group('Window control')
-        group.add_argument('-T',
-                           '--move-to',
-                           action='store_true',
-                           help='Move the window to the selected workspace')
         group.add_argument('-A',
                            '--activate',
                            action='store_true',
@@ -158,6 +154,10 @@ class CommandLineOptions(object):
                            action='store',
                            choices=TRUE_FALSE,
                            help='Set/unset the window below others')
+        group.add_argument('-T',
+                           '--move-to',
+                           action='store_true',
+                           help='Move the window to the selected workspace')
         group.add_argument('-U',
                            '--manual-move',
                            action='store_true',
