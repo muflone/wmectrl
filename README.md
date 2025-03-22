@@ -1,5 +1,7 @@
 # wmectrl
 
+[![CircleCI Build Status](https://img.shields.io/circleci/project/github/muflone/wmectrl/master.svg)](https://circleci.com/gh/muflone/wmectrl)
+
 **Description:** An enhanced window manager control
 
 **Copyright:** 2010-2025 Fabio Castelli (Muflone) <muflone@muflone.com>
