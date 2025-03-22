@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.9"
+install:
+  - pip install -r requirements_ci.txt
+script:
+  - python -m compileall wmectrl
+  - python -m pycodestyle wmectrl
+  - python -m flake8 wmectrl
+  - python -m build --outdir=dist .
+  - python -m pip install --verbose dist/*.whl
+  - python -m pip list
+  - python -m pip freeze
+  - wmectrl --help
+  - wmectrl --version
+  - ls -laR .
+  - python -m pip uninstall --yes --verbose wmectrl
