@@ -19,8 +19,6 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-import logging
-
 from .command_line_options import CommandLineOptions
 from .constants import TRUE
 from . import requires                                            # noqa: F401
@@ -39,13 +37,6 @@ def main():
     command_line.add_configuration_window_size()
     command_line.add_configuration_workspace()
     options = command_line.parse_options()
-    logging.basicConfig(level=options.verbose_level,
-                        format='%(asctime)s '
-                               '%(levelname)-8s '
-                               '%(filename)-15s '
-                               'line: %(lineno)-5d '
-                               '%(funcName)-20s '
-                               '%(message)s')
     # Check screen argument
     screen = Screen()
     if options.screen is None:
