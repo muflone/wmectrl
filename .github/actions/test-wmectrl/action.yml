@@ -1,0 +1,12 @@
+name: "test-wmectrl"
+author: "muflone"
+description: "Test wmectrl"
+runs:
+  using: "composite"
+  steps:
+    - name: Test
+      run: |
+        source venv/bin/activate
+        python3 -m wmectrl.main --help
+        wmectrl --help
+        wmectrl --version

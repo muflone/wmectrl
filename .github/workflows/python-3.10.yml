@@ -11,54 +11,12 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: "python-build-test"
+      uses: ./.github/actions/python-build-test
       with:
         python-version: "3.10"
+        python-module: "wmectrl"
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        # Dependencies for execution
-        sudo apt-get install gir1.2-gtk-3.0 gir1.2-wnck-3.0 gobject-introspection libcairo2-dev libgirepository1.0-dev python3-gi
-
-    - name: Install Python packages
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install -r requirements_ci.txt
-
-    - name: Compile
-      run: |
-        source venv/bin/activate
-        python3 -m compileall wmectrl
-
-    - name: Lint with flake8
-      run: |
-        source venv/bin/activate
-        python3 -m flake8 wmectrl
-
-    - name: Build and Install
-      run: |
-        source venv/bin/activate
-        python3 -m build --outdir=dist .
-        python3 -m pip install --verbose dist/*.whl
-        python3 -m pip list
-        python3 -m pip freeze
-
-    - name: Test
-      run: |
-        source venv/bin/activate
-        python3 -m wmectrl.main --help
-        wmectrl --help
-        wmectrl --version
-
-    - name: Show results
-      run: |
-        ls -laR .
+    - name: "python-build-test"
+      uses: ./.github/actions/test-wmectrl
