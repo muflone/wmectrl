@@ -1,4 +1,6 @@
--r requirements.txt
+# Not using requirements.txt anymore as old Ubuntu images have no required
+# packages to build
+# -r requirements.txt
 
 flake8~=7.1
 pycodestyle~=2.12
