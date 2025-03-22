@@ -51,9 +51,9 @@ def main():
     screen.update()
     if options.list_windows:
         # List all the windows
-        print('XID         PID      Name')
+        print('XID        PID      Name')
         for window in Window(screen=screen).get_all_windows():
-            print(f'{hex(window.get_xid()):12s}'
+            print(f'0x{window.get_xid():08x} '
                   f'{window.get_pid():<8d} '
                   f'{window.get_name()}')
     # Show desktop action
