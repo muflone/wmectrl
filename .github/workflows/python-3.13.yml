@@ -16,11 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: "python-build-test"
-      uses: ./.github/actions/python-build-test
+    - name: "Install dependencies, build"
+      uses: ./.github/actions/python-build
       with:
         python-version: "3.13"
         python-module: "wmectrl"
 
-    - name: "python-build-test"
+    - name: "Test wmectrl"
       uses: ./.github/actions/test-wmectrl
