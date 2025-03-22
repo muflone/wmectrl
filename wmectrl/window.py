@@ -247,11 +247,11 @@ class Window(Wmectrl):
         if height is not None:
             move_resize_mask |= Wnck.WindowMoveResizeMask.HEIGHT
         self.obj.set_geometry(Wnck.WindowGravity.STATIC,
-                              move_resize_mask,
-                              left or 1000,
-                              top or 1000,
-                              width or 1000,
-                              height or 1000)
+                              Wnck.WindowMoveResizeMask(move_resize_mask),
+                              left or 100,
+                              top or 100,
+                              width or 100,
+                              height or 100)
 
     def set_minimize(self, status) -> None:
         """
