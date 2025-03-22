@@ -89,10 +89,10 @@ class CommandLineOptions(object):
                            help='Select window by exact title')
         group.add_argument('--exact-pid',
                            action='store_true',
-                           help='select window by exact PID')
+                           help='Select window by exact PID')
         group.add_argument('--exact-xid',
                            action='store_true',
-                           help='select window by exact XID')
+                           help='Select window by exact XID')
         group.add_argument('--exact-app-title',
                            action='store_true',
                            help='Select window by application title')
