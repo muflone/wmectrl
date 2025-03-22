@@ -56,6 +56,12 @@ jobs:
         python -m pip freeze
         ls -laR .
 
+    - name: Test
+      run: |
+        python -m wmectrl.main --help
+        wmectrl --help
+        wmectrl --version
+
     - name: Uninstall
       run: |
         python -m pip uninstall --yes --verbose wmectrl
