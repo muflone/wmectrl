@@ -20,6 +20,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            sudo apt update
+            sudo apt install gir1.2-gtk-3.0 gobject-introspection libcairo2-dev libgirepository1.0-dev python3-gi
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements_ci.txt
