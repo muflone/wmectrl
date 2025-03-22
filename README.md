@@ -24,5 +24,6 @@ An enhanced window manager control.
 # System Requirements
 
 * Python >= 3.9 (developed and tested for Python 3.13)
-* GTK+ 3.0 libraries for Python 3
-* GObject libraries for Python 3 ( https://pypi.org/project/PyGObject/ )
+* GObject library for Python 3 ( https://pypi.org/project/PyGObject/ )
+* GTK+ 3.x library
+* Wnck 3.x library
