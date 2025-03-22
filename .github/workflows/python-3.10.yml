@@ -47,21 +47,14 @@ jobs:
     - name: Install
       run: |
         . venv/bin/activate
-        python -m build --outdir=dist .
-        python -m pip install --verbose dist/*.whl
-
-    - name: Show results
-      run: |
-        python -m pip list
-        python -m pip freeze
-        ls -laR .
-
-    - name: Test
-      run: |
-        python -m wmectrl.main --help
+        python3 -m build --outdir=dist .
+        python3 -m pip install --verbose dist/*.whl
+        python3 -m pip list
+        python3 -m pip freeze
+        python3 -m wmectrl.main --help
         wmectrl --help
         wmectrl --version
 
-    - name: Uninstall
+    - name: Show results
       run: |
-        python -m pip uninstall --yes --verbose wmectrl
+        ls -laR .

@@ -51,17 +51,10 @@ jobs:
         python3 -m pip install --verbose dist/*.whl
         python3 -m pip list
         python3 -m pip freeze
-
-    - name: Show results
-      run: |
-        ls -laR .
-
-    - name: Test
-      run: |
         python3 -m wmectrl.main --help
         wmectrl --help
         wmectrl --version
 
-    - name: Uninstall
+    - name: Show results
       run: |
-        python3 -m pip uninstall --yes --verbose wmectrl
+        ls -laR .
