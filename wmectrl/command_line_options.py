@@ -177,7 +177,7 @@ class CommandLineOptions(object):
         """
         Add window size command-line arguments
         """
-        group = self.add_group('Window position')
+        group = self.add_group('Window size')
         group.add_argument('-m',
                            '--minimized',
                            action='store',
