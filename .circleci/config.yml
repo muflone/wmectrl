@@ -29,12 +29,15 @@ jobs:
           name: check code
           command: |
             . venv/bin/activate
-            python -m compileall wmectrl
-            python -m pycodestyle wmectrl
-            python -m flake8 wmectrl
-            python -m build --outdir=dist .
-            python -m pip install --verbose dist/*.whl
-            python -m pip list
-            python -m pip freeze
+            python3 -m compileall wmectrl
+            python3 -m pycodestyle wmectrl
+            python3 -m flake8 wmectrl
+            python3 -m build --outdir=dist .
+            python3 -m pip install --verbose dist/*.whl
+            python3 -m pip list
+            python3 -m pip freeze
+            python3 -m wmectrl.main --help
+            wmectrl --help
+            wmectrl --version
             ls -laR .
-            python -m pip uninstall --yes --verbose wmectrl
+            python3 -m pip uninstall --yes --verbose wmectrl
