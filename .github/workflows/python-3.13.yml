@@ -55,4 +55,7 @@ jobs:
         python -m pip list
         python -m pip freeze
         ls -laR .
+
+    - name: Uninstall
+      run: |
         python -m pip uninstall --yes --verbose wmectrl
