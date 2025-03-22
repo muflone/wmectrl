@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     steps:
     - name: "python-build-test"
       uses: ./.github/actions/python-build-test
