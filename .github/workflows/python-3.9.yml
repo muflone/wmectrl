@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: "Install dependencies, build"
+    - name: "Install dependencies and build"
       uses: ./.github/actions/python-build
       with:
         python-version: "3.9"
