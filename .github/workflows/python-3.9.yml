@@ -1,0 +1,58 @@
+name: Python 3.9
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        # Dependencies for execution
+        sudo apt-get install gir1.2-gtk-3.0 gobject-introspection libcairo2-dev libgirepository1.0-dev python3-gi
+
+    - name: Install Python packages
+      run: |
+        python -m pip install --upgrade pip
+        python -m venv venv
+        . venv/bin/activate
+        pip install -r requirements_ci.txt
+
+    - name: Compile
+      run: |
+        python -m compileall wmectrl
+
+    - name: Lint with flake8
+      run: |
+        . venv/bin/activate
+        python -m flake8 wmectrl
+
+    - name: Install
+      run: |
+        . venv/bin/activate
+        python -m build --outdir=dist .
+        python -m pip install --verbose dist/*.whl
+
+    - name: Show results
+      run: |
+        python -m pip list
+        python -m pip freeze
+        ls -laR .
+        python -m pip uninstall --yes --verbose wmectrl
