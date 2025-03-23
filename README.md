@@ -107,7 +107,7 @@ Showing desktop        : False
 Windows count          : 10
 Window name            : wmectrl – README.md
 Window PID             : 223212
-Window XID             : 14708260
+Window XID             : 14690447
 Window position        : 0,32
 Window size            : 1920x1048
 Client position        : 0,32
@@ -160,10 +160,10 @@ the `--list-windows` argument which lists both XID, PID and window title.
 $ wmectrl --list-windows
 
 XID        PID      Name
-0x03200046 7156     Mozilla Thunderbird
-0x05200046 224285   Mozilla Firefox
-0x00e02428 223212   PixelColor – README.md
-0x00e0288f 223212   wmectrl – README.md
+52428870   7156     Mozilla Thunderbird
+85983302   224285   Mozilla Firefox
+14689320   223212   PixelColor – README.md
+14690447   223212   wmectrl – README.md
 ```
 
 To get a window by a partial search on its name you can use:
@@ -185,7 +185,7 @@ $ wmectrl --show-information --window 'PixelColor – README.md' --exact-title
 You can also specify the exact XWindow ID using `--exact-xid`:
 
 ```
-$ wmectrl --show-information --window 14708806 --exact-xid
+$ wmectrl --show-information --window 14689320 --exact-xid
 ```
 
 At the same way you can specify the process ID using `--exact-pid`, but please
