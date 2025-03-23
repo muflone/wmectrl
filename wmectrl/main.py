@@ -53,7 +53,7 @@ def main():
         # List all the windows
         print('XID        PID      Name')
         for window in Window(screen=screen).get_all_windows():
-            print(f'0x{window.get_xid():08x} '
+            print(f'{window.get_xid():<10d} '
                   f'{window.get_pid():<8d} '
                   f'{window.get_name()}')
     # Show desktop action
