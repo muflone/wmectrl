@@ -19,7 +19,7 @@
 ##
 
 APP_NAME = 'wmectrl'
-APP_VERSION = '0.2.2'
+APP_VERSION = '0.2.3'
 APP_DESCRIPTION = 'An enhanced window manager control'
 APP_DOMAIN = 'wmectrl'
 APP_ID = f'{APP_DOMAIN}.muflone.com'
